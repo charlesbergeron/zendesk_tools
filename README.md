@@ -1,11 +1,28 @@
-Zendesk tools
+Zendesk Help Center tools
 =============
 
-This tool is used to extract data from Zendesk's Helpcenter, and put it in a csv file.
+This tool is used to extract data from Zendesk's Help Center, and put it in a csv file.
 
-The main focus was to get the list of all Articles, Sections and Categories, along with any missing translation for each item.
+Currently supported data extractions :
+ - List of all tickets with their attached documents.
+ - Articles, Sections and Categories translations (The locales currently extracted are en-us, fr-ca and es.)
+ - Sections Access policies
 
-The locales currently extracted are en-us, fr-ca and es.
+
+How to use :
+java -jar zendesk_tools.jar -u= -p= -d= -curl= -get= -o=
+
+Description of parameters	
+	-u Zendesk user name
+	-p= Password
+	-d= Company domain on zendesk (ex. https://thevalueisputhere.zendesk.com/api/v2/)
+	-curl= Full path to cUrl executable
+	-get= Which data set will be extracted
+		Possible values are
+			access
+			tickets
+			translations
+	-o= Full path to the file where the data will be extract extracted to
 
 
 Exemple of usage:
